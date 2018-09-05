@@ -5,9 +5,16 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     sort.cpp \
-    search.cpp
+    search.cpp \
+    bubble.cpp \
+    insertion.cpp \
+    merge.cpp
 
 HEADERS += \
     algorithm.h \
     sort.h \
-    search.h
+    search.h \
+    bubble.h \
+    merge.h \
+    insertion.h \
+    sortalgorithm.h

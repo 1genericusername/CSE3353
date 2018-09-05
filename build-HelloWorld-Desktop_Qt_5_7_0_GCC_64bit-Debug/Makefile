@@ -50,10 +50,16 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../HelloWorld/main.cpp \
 		../HelloWorld/sort.cpp \
-		../HelloWorld/search.cpp 
+		../HelloWorld/search.cpp \
+		../HelloWorld/bubble.cpp \
+		../HelloWorld/insertion.cpp \
+		../HelloWorld/merge.cpp 
 OBJECTS       = main.o \
 		sort.o \
-		search.o
+		search.o \
+		bubble.o \
+		insertion.o \
+		merge.o
 DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/unix.conf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/linux.conf \
@@ -199,9 +205,16 @@ DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/lex.prf \
 		../HelloWorld/HelloWorld.pro algorithm.h \
 		sort.h \
-		search.h ../HelloWorld/main.cpp \
+		search.h \
+		bubble.h \
+		merge.h \
+		insertion.h \
+		sortalgorithm.h ../HelloWorld/main.cpp \
 		../HelloWorld/sort.cpp \
-		../HelloWorld/search.cpp
+		../HelloWorld/search.cpp \
+		../HelloWorld/bubble.cpp \
+		../HelloWorld/insertion.cpp \
+		../HelloWorld/merge.cpp
 QMAKE_TARGET  = HelloWorld
 DESTDIR       = 
 TARGET        = HelloWorld
@@ -545,7 +558,9 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../HelloWorld/main.cpp 
+main.o: ../HelloWorld/main.cpp ../HelloWorld/sort.h \
+		../HelloWorld/algorithm.h \
+		../HelloWorld/search.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../HelloWorld/main.cpp
 
 sort.o: ../HelloWorld/sort.cpp ../HelloWorld/sort.h \
@@ -555,6 +570,16 @@ sort.o: ../HelloWorld/sort.cpp ../HelloWorld/sort.h \
 search.o: ../HelloWorld/search.cpp ../HelloWorld/search.h \
 		../HelloWorld/algorithm.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o search.o ../HelloWorld/search.cpp
+
+bubble.o: ../HelloWorld/bubble.cpp ../HelloWorld/bubble.h \
+		../HelloWorld/sortalgorithm.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bubble.o ../HelloWorld/bubble.cpp
+
+insertion.o: ../HelloWorld/insertion.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o insertion.o ../HelloWorld/insertion.cpp
+
+merge.o: ../HelloWorld/merge.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o merge.o ../HelloWorld/merge.cpp
 
 ####### Install
 

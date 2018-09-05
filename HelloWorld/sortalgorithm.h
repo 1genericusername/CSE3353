@@ -1,14 +1,13 @@
-#ifndef ALGORITHM_H
-#define ALGORITHM_H
-#include <string>
+#ifndef SORTALGORITHM_H
+#define SORTALGORITHM_H
 #include <iostream>
 using namespace std;
 
-class Algorithm{
+class SortAlgorithm{
 
-    public:
+public:
 
-    Algorithm(){}
+    SortAlgorithm(){}
 
     virtual void load(string)=0;
 
@@ -18,10 +17,8 @@ class Algorithm{
 
     virtual void stats()=0;
 
-    virtual void select(int)=0;
-
     virtual void save(string)=0;
 
-    virtual void configure()=0;
 };
-#endif // ALGORITHM_H
+
+#endif // SORTALGORITHM_H

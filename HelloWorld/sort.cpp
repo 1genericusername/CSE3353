@@ -1,6 +1,4 @@
 #include <sort.h>
-#include <iostream>
-using namespace std;
 
 Sort::Sort()
 {
@@ -19,7 +17,7 @@ void Sort::execute()
 
 void Sort::display()
 {
-    cout << "sort";
+    sortAlgorithm->display();
 }
 
 void Sort::stats()
@@ -27,8 +25,19 @@ void Sort::stats()
 
 }
 
-void Sort::select(int)
+void Sort::select(int selection)
 {
+    if(selection == 0)
+
+        sortAlgorithm = new Bubble;
+
+    else if(selection == 1)
+
+        sortAlgorithm = new Insertion;
+
+    else if(selection == 2)
+
+        sortAlgorithm = new Merge;
 
 }
 

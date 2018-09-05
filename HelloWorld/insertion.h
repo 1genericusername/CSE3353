@@ -8,7 +8,7 @@ public:
 
     Insertion();
 
-    void load(string);
+    //void load(string);
 
     void execute();
 

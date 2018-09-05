@@ -8,7 +8,7 @@ public:
 
     Bubble();
 
-    void load(string);
+    //void load(string);
 
     void execute();
 

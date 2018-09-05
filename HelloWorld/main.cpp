@@ -10,8 +10,9 @@ int main(int argc, char *argv[])
 {
     Algorithm* algorithm;
     algorithm = new Sort;
-    algorithm->select(2);
+    algorithm->select(0);
     algorithm->display();
+    algorithm->load("20%Unique10");
 
 
 

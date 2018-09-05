@@ -53,13 +53,15 @@ SOURCES       = ../HelloWorld/main.cpp \
 		../HelloWorld/search.cpp \
 		../HelloWorld/bubble.cpp \
 		../HelloWorld/insertion.cpp \
-		../HelloWorld/merge.cpp 
+		../HelloWorld/merge.cpp \
+		../HelloWorld/sortalgorithm.cpp 
 OBJECTS       = main.o \
 		sort.o \
 		search.o \
 		bubble.o \
 		insertion.o \
-		merge.o
+		merge.o \
+		sortalgorithm.o
 DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/unix.conf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/linux.conf \
@@ -214,7 +216,8 @@ DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../HelloWorld/search.cpp \
 		../HelloWorld/bubble.cpp \
 		../HelloWorld/insertion.cpp \
-		../HelloWorld/merge.cpp
+		../HelloWorld/merge.cpp \
+		../HelloWorld/sortalgorithm.cpp
 QMAKE_TARGET  = HelloWorld
 DESTDIR       = 
 TARGET        = HelloWorld
@@ -560,11 +563,19 @@ compiler_clean:
 
 main.o: ../HelloWorld/main.cpp ../HelloWorld/sort.h \
 		../HelloWorld/algorithm.h \
+		../HelloWorld/bubble.h \
+		../HelloWorld/sortalgorithm.h \
+		../HelloWorld/insertion.h \
+		../HelloWorld/merge.h \
 		../HelloWorld/search.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../HelloWorld/main.cpp
 
 sort.o: ../HelloWorld/sort.cpp ../HelloWorld/sort.h \
-		../HelloWorld/algorithm.h
+		../HelloWorld/algorithm.h \
+		../HelloWorld/bubble.h \
+		../HelloWorld/sortalgorithm.h \
+		../HelloWorld/insertion.h \
+		../HelloWorld/merge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sort.o ../HelloWorld/sort.cpp
 
 search.o: ../HelloWorld/search.cpp ../HelloWorld/search.h \
@@ -575,11 +586,16 @@ bubble.o: ../HelloWorld/bubble.cpp ../HelloWorld/bubble.h \
 		../HelloWorld/sortalgorithm.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bubble.o ../HelloWorld/bubble.cpp
 
-insertion.o: ../HelloWorld/insertion.cpp 
+insertion.o: ../HelloWorld/insertion.cpp ../HelloWorld/insertion.h \
+		../HelloWorld/sortalgorithm.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o insertion.o ../HelloWorld/insertion.cpp
 
-merge.o: ../HelloWorld/merge.cpp 
+merge.o: ../HelloWorld/merge.cpp ../HelloWorld/merge.h \
+		../HelloWorld/sortalgorithm.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o merge.o ../HelloWorld/merge.cpp
+
+sortalgorithm.o: ../HelloWorld/sortalgorithm.cpp ../HelloWorld/sortalgorithm.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sortalgorithm.o ../HelloWorld/sortalgorithm.cpp
 
 ####### Install
 

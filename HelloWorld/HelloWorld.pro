@@ -8,7 +8,8 @@ SOURCES += main.cpp \
     search.cpp \
     bubble.cpp \
     insertion.cpp \
-    merge.cpp
+    merge.cpp \
+    sortalgorithm.cpp
 
 HEADERS += \
     algorithm.h \

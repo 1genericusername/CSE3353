@@ -5,10 +5,12 @@ Bubble::Bubble()
 
 }
 
+/*
 void Bubble::load(string)
 {
 
 }
+*/
 
 void Bubble::execute()
 {

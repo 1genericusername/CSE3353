@@ -11,7 +11,7 @@ public:
 
     SortAlgorithm(){}
 
-    virtual void load(string)=0;
+    void load(string);
 
     virtual void execute()=0;
 
@@ -21,14 +21,10 @@ public:
 
     virtual void save(string)=0;
 
-    //void memez(){
-      //  cout << "memez";
-    //}
-
-private:
+protected:
 
   vector<int> data;
-  ofstream inputfile;
+  ifstream inputfile;
 
 };
 

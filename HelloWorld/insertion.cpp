@@ -5,10 +5,12 @@ Insertion::Insertion()
 
 }
 
+/*
 void Insertion::load(string)
 {
 
 }
+*/
 
 void Insertion::execute()
 {

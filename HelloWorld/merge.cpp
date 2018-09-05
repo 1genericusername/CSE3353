@@ -6,11 +6,13 @@ Merge::Merge()
 
 }
 
+/*
 void Merge::load(string filename)
 {
-    inputfile.open(filename);
+
     //data.push_back(1);
 }
+*/
 
 void Merge::execute()
 {

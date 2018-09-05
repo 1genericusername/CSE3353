@@ -28,15 +28,13 @@ void Sort::stats()
 void Sort::select(int selection)
 {
     if(selection == 0)
-
         sortAlgorithm = new Bubble;
 
-    else if(selection == 1)
 
+    else if(selection == 1)
         sortAlgorithm = new Insertion;
 
     else if(selection == 2)
-
         sortAlgorithm = new Merge;
 
 }

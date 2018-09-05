@@ -48,8 +48,12 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../HelloWorld/main.cpp 
-OBJECTS       = main.o
+SOURCES       = ../HelloWorld/main.cpp \
+		../HelloWorld/sort.cpp \
+		../HelloWorld/search.cpp 
+OBJECTS       = main.o \
+		sort.o \
+		search.o
 DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/unix.conf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/common/linux.conf \
@@ -181,6 +185,7 @@ DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
+		../HelloWorld/.qmake.stash \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -192,7 +197,11 @@ DIST          = ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/exceptions.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/yacc.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/lex.prf \
-		../HelloWorld/HelloWorld.pro  ../HelloWorld/main.cpp
+		../HelloWorld/HelloWorld.pro algorithm.h \
+		sort.h \
+		search.h ../HelloWorld/main.cpp \
+		../HelloWorld/sort.cpp \
+		../HelloWorld/search.cpp
 QMAKE_TARGET  = HelloWorld
 DESTDIR       = 
 TARGET        = HelloWorld
@@ -335,6 +344,7 @@ Makefile: ../HelloWorld/HelloWorld.pro ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/li
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -479,6 +489,7 @@ Makefile: ../HelloWorld/HelloWorld.pro ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/li
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf:
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf:
 ../../../../Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf:
@@ -536,6 +547,14 @@ compiler_clean:
 
 main.o: ../HelloWorld/main.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../HelloWorld/main.cpp
+
+sort.o: ../HelloWorld/sort.cpp ../HelloWorld/sort.h \
+		../HelloWorld/algorithm.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sort.o ../HelloWorld/sort.cpp
+
+search.o: ../HelloWorld/search.cpp ../HelloWorld/search.h \
+		../HelloWorld/algorithm.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o search.o ../HelloWorld/search.cpp
 
 ####### Install
 

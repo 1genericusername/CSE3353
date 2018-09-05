@@ -5,14 +5,14 @@ Sort::Sort()
 
 }
 
-void Sort::load(string)
+void Sort::load(string filename)
 {
-
+    sortAlgorithm->load(filename);
 }
 
 void Sort::execute()
 {
-
+    sortAlgorithm->execute();
 }
 
 void Sort::display()
@@ -22,7 +22,7 @@ void Sort::display()
 
 void Sort::stats()
 {
-
+    sortAlgorithm->stats();
 }
 
 void Sort::select(int selection)
@@ -41,9 +41,9 @@ void Sort::select(int selection)
 
 }
 
-void Sort::save(string)
+void Sort::save(string filename)
 {
-
+    sortAlgorithm->save(filename);
 }
 
 void Sort::configure()

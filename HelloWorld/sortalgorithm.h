@@ -1,6 +1,8 @@
 #ifndef SORTALGORITHM_H
 #define SORTALGORITHM_H
 #include <iostream>
+#include <fstream>
+#include <vector>
 using namespace std;
 
 class SortAlgorithm{
@@ -18,6 +20,15 @@ public:
     virtual void stats()=0;
 
     virtual void save(string)=0;
+
+    //void memez(){
+      //  cout << "memez";
+    //}
+
+private:
+
+  vector<int> data;
+  ofstream inputfile;
 
 };
 

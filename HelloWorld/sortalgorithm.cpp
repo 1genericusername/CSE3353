@@ -13,7 +13,7 @@ void SortAlgorithm::load(string filename)
         while(getline(inputfile,line)){
             //cout << line << endl;
             temp = stoi(line,nullptr,10);
-            cout << temp << endl;
+            data.push_back(temp);
         }
     }
 
@@ -21,4 +21,11 @@ void SortAlgorithm::load(string filename)
 
 
 
+}
+
+void SortAlgorithm::display()
+{
+    for(int i=0; i<data.size(); i++){
+        cout << data[i] << " ";
+    }
 }

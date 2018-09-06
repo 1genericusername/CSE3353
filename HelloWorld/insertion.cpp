@@ -17,10 +17,12 @@ void Insertion::execute()
 
 }
 
+/*
 void Insertion::display()
 {
     cout << "insertion";
 }
+*/
 
 void Insertion::stats()
 {

@@ -19,11 +19,12 @@ void Merge::execute()
 
 }
 
+/*
 void Merge::display()
 {
     cout << "merge";
 }
-
+*/
 void Merge::stats()
 {
 

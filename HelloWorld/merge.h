@@ -12,7 +12,7 @@ public:
 
     void execute();
 
-    void display();
+    //void display();
 
     void stats();
 

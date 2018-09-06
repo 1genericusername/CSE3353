@@ -15,7 +15,7 @@ public:
 
     virtual void execute()=0;
 
-    virtual void display()=0;
+    void display();
 
     virtual void stats()=0;
 

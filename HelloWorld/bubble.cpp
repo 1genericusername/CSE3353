@@ -17,10 +17,12 @@ void Bubble::execute()
 
 }
 
+/*
 void Bubble::display()
 {
     cout << "bubble";
 }
+*/
 
 void Bubble::stats()
 {

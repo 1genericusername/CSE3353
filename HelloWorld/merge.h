@@ -17,6 +17,11 @@ public:
     //void stats();
 
     //void save(string);
+
+//private:
+    void mergeSort(int[], int, int);
+    void merge(int[],int l, int m, int r);
+
 };
 
 #endif // MERGE_H

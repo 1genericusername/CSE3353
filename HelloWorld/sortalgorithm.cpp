@@ -11,14 +11,11 @@ void SortAlgorithm::load(string filename)
     if(inputfile.is_open()){
 
         while(getline(inputfile,line)){
-            //cout << line << endl;
             temp = stoi(line,nullptr,10);
             data.push_back(temp);
         }
-
         inputfile.close();
     }
-
     else cout << "unable to open file";
 }
 
@@ -39,14 +36,10 @@ void SortAlgorithm::stats()
 
         while(getline(inputfile,line)){
             cout << line << endl;
-
         }
-
         inputfile.close();
     }
-
     else cout << "unable to open file";
-
 }
 
 void SortAlgorithm::save(string filename)

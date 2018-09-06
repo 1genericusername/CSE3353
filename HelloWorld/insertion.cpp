@@ -5,13 +5,6 @@ Insertion::Insertion()
 
 }
 
-/*
-void Insertion::load(string)
-{
-
-}
-*/
-
 void Insertion::execute()
 {
     auto start = std::chrono::high_resolution_clock::now();
@@ -37,23 +30,4 @@ void Insertion::execute()
     outputfile << "Number of records analyzed: " << data.size() << endl;
     outputfile.close();
 }
-
-/*
-void Insertion::display()
-{
-    cout << "insertion";
-}
-*/
-
-/*void Insertion::stats()
-{
-
-}
-*/
-/*
-void Insertion::save(string)
-{
-
-}
-*/
 

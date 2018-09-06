@@ -5,13 +5,6 @@ Bubble::Bubble()
 
 }
 
-/*
-void Bubble::load(string)
-{
-
-}
-*/
-
 void Bubble::execute()
 {
     auto start = std::chrono::high_resolution_clock::now();
@@ -41,21 +34,3 @@ void Bubble::execute()
     outputfile.close();
 }
 
-/*
-void Bubble::display()
-{
-    cout << "bubble";
-}
-*/
-/*
-void Bubble::stats()
-{
-
-}
-*/
-/*
-void Bubble::save(string)
-{
-
-}
-*/

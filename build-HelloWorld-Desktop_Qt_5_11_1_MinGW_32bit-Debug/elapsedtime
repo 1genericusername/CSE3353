@@ -1,4 +1,4 @@
 
-Algorithm name: Bubble Sort
-Elapsed time: 0.0090005s
-Number of records analyzed: 1000
+Algorithm name: Merge Sort
+Elapsed time: 0.0080004s
+Number of records analyzed: 100000

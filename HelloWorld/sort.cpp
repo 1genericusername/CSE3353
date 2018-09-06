@@ -27,16 +27,18 @@ void Sort::stats()
 
 void Sort::select(int selection)
 {
-    if(selection == 0)
+    if(selection == 0){
         sortAlgorithm = new Bubble;
-
-
-    else if(selection == 1)
+        cout << "Bubble Sort Selected..." << endl;
+    }
+    else if(selection == 1){
         sortAlgorithm = new Insertion;
-
-    else if(selection == 2)
+        cout << "Insertion Sort Selected..."<< endl;
+    }
+    else if(selection == 2){
         sortAlgorithm = new Merge;
-
+        cout << "Merge Sort Selected" << endl;
+    }
 }
 
 void Sort::save(string filename)

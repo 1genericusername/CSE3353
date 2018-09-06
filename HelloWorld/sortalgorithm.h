@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <chrono>
 using namespace std;
 
 class SortAlgorithm{
@@ -17,14 +18,15 @@ public:
 
     void display();
 
-    virtual void stats()=0;
+    void stats();
 
-    virtual void save(string)=0;
+    void save(string);
 
 protected:
 
   vector<int> data;
   ifstream inputfile;
+  ofstream outputfile;
 
 };
 

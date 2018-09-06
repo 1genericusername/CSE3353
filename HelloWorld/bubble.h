@@ -14,9 +14,9 @@ public:
 
     //void display();
 
-    void stats();
+    //void stats();
 
-    void save(string);
+    //void save(string);
 
 };
 

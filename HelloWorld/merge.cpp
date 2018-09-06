@@ -25,12 +25,15 @@ void Merge::display()
     cout << "merge";
 }
 */
+/*
 void Merge::stats()
 {
 
 }
-
+*/
+/*
 void Merge::save(string)
 {
 
 }
+*/
